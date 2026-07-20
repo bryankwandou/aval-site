@@ -60,13 +60,13 @@ export function Guardrails() {
             <div className="mt-10 grid grid-cols-3 gap-6">
               <div>
                 <div className="text-4xl text-accent">
-                  <Counter to={55} />
+                  <Counter to={56} />
                 </div>
                 <div className="mt-1 text-xs text-muted">host tests, all green</div>
               </div>
               <div>
                 <div className="text-4xl text-accent">
-                  <Counter to={8} />
+                  <Counter to={9} />
                 </div>
                 <div className="mt-1 text-xs text-muted">
                   injection scenarios, all fail closed

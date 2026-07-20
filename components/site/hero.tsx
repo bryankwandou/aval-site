@@ -115,7 +115,7 @@ export function Hero() {
           {[
             ["T0 / T1", "custody tiers, nothing signed by machines"],
             ["0 keys", "held anywhere in the system, by construction"],
-            ["55", "host tests, injection suite included"],
+            ["56", "host tests, injection suite included"],
             ["3", "wasm components, one shared pure core"],
           ].map(([big, small]) => (
             <div key={big} className="bg-surface px-6 py-5">
