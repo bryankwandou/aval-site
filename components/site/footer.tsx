@@ -9,7 +9,7 @@ const strip = [
   "fail-closed caps",
   "chain-side recheck",
   "wasm32-wasip2",
-  "56 host tests",
+  "114 host tests",
   "MIT licensed",
 ];
 

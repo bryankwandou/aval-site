@@ -60,7 +60,7 @@ export function Guardrails() {
             <div className="mt-10 grid grid-cols-3 gap-6">
               <div>
                 <div className="text-4xl text-accent">
-                  <Counter to={56} />
+                  <Counter to={114} />
                 </div>
                 <div className="mt-1 text-xs text-muted">host tests, all green</div>
               </div>
