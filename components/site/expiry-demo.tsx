@@ -222,16 +222,16 @@ export function ExpiryDemo() {
   };
 
   return (
-    <section id="rail" className="relative border-y border-line bg-background py-24">
+    <section id="refunds" className="relative border-y border-line bg-background py-24">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mb-12 flex flex-wrap items-end justify-between gap-6">
           <div>
             <p className="mb-3 font-mono text-xs uppercase tracking-[0.22em] text-muted">
-              The rail, replayed
+              Verified on devnet, not illustrated
             </p>
             <h2 className="font-display max-w-xl text-3xl font-semibold tracking-tight sm:text-4xl">
-              Your agent works at noon. You approve at 16:40. Watch what
-              survives the gap.
+              The refund is built at 14:52. You approve at 19:30. One of these
+              two is already dead.
             </h2>
           </div>
           <div className="flex items-center gap-4">

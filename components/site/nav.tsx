@@ -2,14 +2,13 @@
 
 import { motion } from "framer-motion";
 
-import { TextRoll } from "@/components/ui/skiper58";
 import { AvalWordmark } from "@/components/site/logo";
 
 const links = [
-  { label: "Rail", href: "#rail" },
-  { label: "Plugins", href: "#plugins" },
-  { label: "Guardrails", href: "#guardrails" },
-  { label: "Pull request", href: "https://github.com/zeroclaw-labs/zeroclaw-plugins/pull/98" },
+  { label: "The shop", href: "#shop" },
+  { label: "Refunds", href: "#refunds" },
+  { label: "Custody", href: "#custody" },
+  { label: "Run it", href: "#run" },
 ];
 
 export function Nav() {
@@ -34,17 +33,25 @@ export function Nav() {
         </a>
         <div className="hidden items-center gap-8 text-sm text-muted sm:flex">
           {links.map((l) => (
-            <a key={l.href} href={l.href} className="transition-colors hover:text-foreground">
-              <TextRoll className="py-1">{l.label}</TextRoll>
+            <a
+              key={l.href}
+              href={l.href}
+              className="group relative py-1 transition-colors duration-200 hover:text-foreground"
+            >
+              {l.label}
+              <span
+                aria-hidden
+                className="absolute inset-x-0 -bottom-0.5 h-px origin-left scale-x-0 bg-accent transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-x-100"
+              />
             </a>
           ))}
         </div>
         <a
-          href="https://github.com/bryankwandou/zeroclaw-plugins/tree/aval-suite/plugins"
+          href="#run"
           className="group relative overflow-hidden rounded-full border border-accent/40 px-4 py-1.5 text-sm text-accent transition-colors hover:text-background"
         >
           <span className="absolute inset-0 -translate-y-full bg-accent transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-y-0" />
-          <span className="relative">Get the plugins</span>
+          <span className="relative">Set up the terminal</span>
         </a>
       </nav>
     </motion.header>

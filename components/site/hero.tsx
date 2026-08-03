@@ -7,7 +7,7 @@ import { AvalMark } from "@/components/site/logo";
 const ease = [0.22, 1, 0.36, 1] as const;
 
 function Headline() {
-  const lines = ["The agent proposes.", "You sign on your", "own time."];
+  const lines = ["Charge the table.", "Approve the refund", "after lunch."];
   return (
     <h1 className="font-display text-[clamp(2.6rem,7vw,5.6rem)] font-semibold leading-[1.02] tracking-tight">
       {lines.map((line, li) => (
@@ -20,7 +20,7 @@ function Headline() {
           >
             {li === 2 ? (
               <>
-                own <span className="text-accent">time.</span>
+                after <span className="text-accent">lunch.</span>
               </>
             ) : (
               line
@@ -35,7 +35,6 @@ function Headline() {
 export function Hero() {
   return (
     <section id="top" className="bg-grid relative overflow-hidden pb-24 pt-40">
-      {/* one quiet gold wash, top right */}
       <div
         className="pointer-events-none absolute -right-40 -top-40 h-[480px] w-[480px] rounded-full opacity-[0.14]"
         style={{
@@ -51,7 +50,7 @@ export function Hero() {
           className="mb-8 flex items-center gap-2 font-mono text-xs uppercase tracking-[0.22em] text-muted"
         >
           <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent" />
-          Solana plugins for ZeroClaw agents
+          A shop terminal that lives in the owner&apos;s chat
         </motion.p>
 
         <Headline />
@@ -62,11 +61,11 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.62, ease }}
           className="mt-8 max-w-xl text-lg leading-relaxed text-muted"
         >
-          A normal unsigned Solana transaction dies about ninety seconds after
-          an agent builds it — usually before you have found your phone. Aval
-          anchors agent payments to durable nonces so they keep for hours or
-          days, then verifies them against the chain at the moment you sign.
-          No key ever exists on the agent&apos;s side.
+          Caixa runs on the shop&apos;s Telegram. The owner types a charge, the
+          customer pays from their own wallet, and the agent reports the payment
+          back a minute later. Refunds stop and wait for a person — and because
+          they are anchored to a durable nonce instead of a blockhash that dies
+          in ninety seconds, waiting until after the rush costs nothing.
         </motion.p>
 
         <motion.div
@@ -76,21 +75,20 @@ export function Hero() {
           className="mt-10 flex flex-wrap items-center gap-4"
         >
           <a
-            href="#rail"
+            href="#refunds"
             className="group relative overflow-hidden rounded-full bg-accent px-6 py-3 font-medium text-background"
           >
             <span className="absolute inset-0 -translate-x-full bg-accent-soft transition-transform duration-400 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-0" />
-            <span className="relative">Watch a payment survive the afternoon</span>
+            <span className="relative">See a refund survive the afternoon</span>
           </a>
           <a
-            href="https://github.com/zeroclaw-labs/zeroclaw-plugins/pull/98"
+            href="#run"
             className="rounded-full border border-line px-6 py-3 text-muted transition-colors hover:border-accent/50 hover:text-foreground"
           >
-            Read the pull request
+            Set it up yourself
           </a>
         </motion.div>
 
-        {/* live seal */}
         <motion.div
           initial={{ opacity: 0, scale: 0.85, rotate: -8 }}
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
@@ -105,7 +103,6 @@ export function Hero() {
           </div>
         </motion.div>
 
-        {/* fact strip */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -113,10 +110,10 @@ export function Hero() {
           className="mt-20 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-4"
         >
           {[
-            ["T0 / T1", "custody tiers, nothing signed by machines"],
-            ["0 keys", "held anywhere in the system, by construction"],
-            ["114", "host tests, injection suite included"],
-            ["3", "wasm components, one shared pure core"],
+            ["T0 / T1", "the agent reads and builds, it never signs"],
+            ["0 keys", "held anywhere in the deployment, by construction"],
+            ["36", "tests behind the refusals, injection suite included"],
+            ["1 min", "from payment to confirmation in the owner's chat"],
           ].map(([big, small]) => (
             <div key={big} className="bg-surface px-6 py-5">
               <div className="font-mono text-2xl text-accent">{big}</div>

@@ -38,7 +38,7 @@ const transcript = [
 
 export function Guardrails() {
   return (
-    <section id="guardrails" className="border-t border-line bg-surface py-24">
+    <section id="custody" className="border-t border-line bg-surface py-24">
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid gap-16 lg:grid-cols-2">
           <div>

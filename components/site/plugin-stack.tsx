@@ -113,13 +113,14 @@ export function PluginStack() {
   });
 
   return (
-    <section id="plugins" className="relative">
+    <section id="run" className="relative">
       <div className="mx-auto max-w-6xl px-6 pt-24">
         <p className="mb-3 font-mono text-xs uppercase tracking-[0.22em] text-muted">
-          Three components, one rail
+          What had to be compiled, and what did not
         </p>
         <h2 className="font-display max-w-2xl text-3xl font-semibold tracking-tight sm:text-4xl">
-          Small tools with sharp edges, not one tool that does everything.
+          Charging is a string and settlement is one read. Only the waiting
+          needed real code.
         </h2>
       </div>
       <div ref={container} className="relative pb-[20vh]">
